@@ -22,7 +22,6 @@ body{
 }
 /* ________________________________ FIN ESTILOS GENERALES _________________________________*/
 header{
-	height:auto;
 	width:99%;
 	padding:0.625em 0.625em 0 0.625em ;
 	background-color:#1C1B1B;
@@ -94,7 +93,7 @@ header{
 	position: absolute;
 	top:0;
 	left:50%;
-	z-index:99;
+	z-index:1100;
 }
 .clear{
 	clear:both;
@@ -162,10 +161,128 @@ footer a:hover{
 	text-align:right;
 	}
 	
+/* ________________________________ ESTILOS DETALLE FOTO __________________________________*/
+
+#detalle_foto{
+	width:100%;
+	max-width:980px;
+	position:fixed;
+	z-index:1000;
+	top:48px;
+	left:0;
+}
+#detalle_foto_tit{
+	background-color:#EEE;
+	border:#EEE solid 1px;
+}
+#detalle_foto_tit h1{
+	color:#FF6600;
+	font-size:1.875em;
+	line-height:0.875em;
+	padding:10px 0 0 10px;
+	margin:0;
+}
+#detalle_foto_tit h2{
+	color:#444;
+	font-size:0.875em;
+	padding:0 0 0 10px;
+	margin:0;
+}
+#detalle_foto_tit span{
+	position: relative;
+	top:0;
+	right:0;
+	z-index:1001;
+	float:right;
+	margin:0.313em 0;
+}
+#detalle_foto_tit span a{
+	color:#FFF;
+	text-decoration:none;
+	background-color:#1C1B1B;
+	padding:0.313em;
+}
+#detalle_foto_tit span a:hover{
+	color:#FFF;
+	text-decoration:none;
+	background-color:#FF6600;
+	padding:0.313em;
+}
+#detalle_foto_imgs{
+	max-width:725px;
+	max-height:940px;
+	width:75%;
+	height:80%;
+	float:left;
+	padding:0.313em;
+	overflow:auto;
+	background-color:#FFF;
+}
+#detalle_foto_imgs ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#detalle_foto_imgs ul li{
+	padding:0.313em;
+}
+#detalle_foto_imgs ul li img{
+	width:100%;
+	max-width:690px;
+}
+#detalle_foto_proyecto{
+	max-width:225px;
+	width:25%; height:940px;
+	float:right;
+	padding:0.313em 0.313em 0.313em 0.938em;
+	background-color:#4C4C4C;
+	color:#EDEDED;
+}
+#detalle_foto_proyecto h1{
+	font-size:1.125em;
+	font-weight:bold;
+	color:#FF6600;
+}
+
+#detalle_foto_proyecto p{
+	font-size:0.688em;
+}
+#detalle_foto_relacionados{
+	clear:both;
+	width:100%;
+	border-top:1px solid #CCCCCC;
+	background-color:#EEE;
+}
+#detalle_foto_relacionados h1{
+	color:#FF6600;
+	margin:0;
+	padding:0.313em;
+	font-size:1.125em;
+}
+#detalle_foto_relacionados ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#detalle_foto_relacionados ul li{
+	float:left;
+	margin:0 0.313em;
+}
+#detalle_foto_relacionados ul li img{
+    filter: url(filters.svg#grayscale);
+    filter: gray;
+    -webkit-filter: grayscale(1);
+}
+#detalle_foto_relacionados ul li img:hover{
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
 /* ________________________________ ESTILOS GENERALES IPAD_________________________________*/
 
 @media screen and (max-width: 700px){
-
+	header{
+	height:50px;
+	}
 	#form_01{
 		display: none;
 	}
@@ -176,8 +293,8 @@ footer a:hover{
 		left:0;
 	}
 	#logo img{
-		max-width:53px;
-		max-height:53px;
+		max-width:50px;
+		max-height:50px;
 	}
 	#menu_img {
 		width:100%;
@@ -195,14 +312,14 @@ footer a:hover{
 		text-align:center;
 		bottom: 0;
 		left: 0;
-		z-index: 900;
+		z-index: 2900;
 	}
 	#menu_redes img{
 		min-width:30px;
 		min-height:30px;
 		text-align:center;
 	}
-.img_t01{
+	.img_t01{
 		min-width:233px;
 		min-height:190px;
 		width:50%;
@@ -225,6 +342,23 @@ footer a:hover{
 		min-height:380px;
 		width:100%;
 		height:auto;
+	}
+	#detalle_foto{
+		position:absolute;
+	}
+	#detalle_foto_proyecto{
+		float:left;
+		width:100%;
+		max-width:700px;
+		height:auto;
+	}
+	#detalle_foto_imgs{
+		width:100%;
+		height:auto;
+		overflow: visible;
+	}
+	#detalle_foto_relacionados{
+		display:none;
 	}
 	footer{
 		display:none;
